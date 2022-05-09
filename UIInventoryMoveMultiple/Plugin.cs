@@ -37,7 +37,7 @@ namespace UIInventoryMoveMultiple
         [HarmonyPatch(typeof(InventoryDisplayer), "OnImageClicked")]
         static bool InventoryDisplayer_OnImageClicked(EventTriggerCallbackData _eventTriggerCallbackData, Inventory ___inventory)
         {
-            if (_eventTriggerCallbackData.pointerEventData.button == PointerEventData.InputButton.Middle)
+            if (_eventTriggerCallbackData.pointerEventData.button == PointerEventData.InputButton.z)
             {
                 int max = int.MaxValue;
                 if (Keyboard.current[Key.LeftShift].isPressed)
